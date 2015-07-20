@@ -377,23 +377,23 @@ C modified 5/15/06 for poinct
 ! false.  generate_rad also set orig kinematics, and cuts on Em/Pm.
 ! If not using_rad, must do these here.
 
-	if (using_rad) then
-	  call generate_rad(main,vertex,orig,success)
-	  if (debug(2)) write(6,*)'gen: after gen_rad, success =',success
-	else
+	!if (using_rad) then
+	  !call generate_rad(main,vertex,orig,success)
+	  !if (debug(2)) write(6,*)'gen: after gen_rad, success =',success
+	!else
 	  success = .true.
-	  if (doing_heavy) success = 
-     >		(vertex%Em .ge. VERTEXedge%Em%min .and.
-     >		 vertex%Em .le. VERTEXedge%Em%max .and.
-     >		 vertex%Pm .ge. VERTEXedge%Pm%min .and. 
-     >		 vertex%Pm .le. VERTEXedge%Pm%max)
+	  !if (doing_heavy) success = 
+     !>		(vertex%Em .ge. VERTEXedge%Em%min .and.
+     !>		 vertex%Em .le. VERTEXedge%Em%max .and.
+     !>		 vertex%Pm .ge. VERTEXedge%Pm%min .and. 
+     !>		 vertex%Pm .le. VERTEXedge%Pm%max)
 	  if (success) then
 c	    do i = 1, neventfields
 c	      orig.all(i) = vertex.all(i)
 c	    enddo
 	     orig = vertex
 	  endif
-	endif
+	!endif
 
 
 C DJG need to decay the rho here before we begin transporting through the
