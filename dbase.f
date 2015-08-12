@@ -955,6 +955,8 @@ C DJG:
 	ierr = regparmint('doing_phsp',doing_phsp,0)
 	ierr = regparmdouble('cuts%Em%min',cuts%Em%min,0)
 	ierr = regparmdouble('cuts%Em%max',cuts%Em%max,0)
+        ierr = regparmdouble('cuts%vertexPm%min',cuts%vertexPm%min,0)
+	ierr = regparmdouble('cuts%vertexPm%max',cuts%vertexPm%max,0)
 	ierr = regparmint('using_Eloss',using_Eloss,0)
 	ierr = regparmint('correct_Eloss',correct_eloss,0)
 	ierr = regparmint('correct_raster',correct_raster,0)
