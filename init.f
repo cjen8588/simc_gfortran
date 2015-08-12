@@ -327,8 +327,8 @@ c	  targ%Coulomb%max = targ%Coulomb_constant * 3.0
 	  VERTEXedge%Pm%min = 0.0
 	  VERTEXedge%Pm%max = max(abs(Pm_theory(1)%min),abs(Pm_theory(1)%max))
 	else if (doing_heavy) then
-	  VERTEXedge%Pm%min=2.0
-	  VERTEXedge%Pm%max=798.0
+	  VERTEXedge%Pm%min = cuts%vertexPm%min
+	  VERTEXedge%Pm%max = cuts%vertexPm%max
 	  do i = 1, nrhoPm
 	    t1=max(abs(Pm_theory(i)%min),abs(Pm_theory(i)%max))
 	    VERTEXedge%Pm%max = max(VERTEXedge%Pm%max,t1)
@@ -967,6 +967,9 @@ C Initialize "cuts"
 
       cuts%Pm%min=xmin
       cuts%Pm%max=xmax
+
+      cuts%vertexPm%min=xmin
+      cuts%vertexPm%max=xmax
 
 C Initialize "Edge"
 
