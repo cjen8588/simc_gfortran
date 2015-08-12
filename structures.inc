@@ -105,7 +105,7 @@
 
 	type cuts_true
                 sequence
-		type(cutstype)::	Em, Pm
+		type(cutstype)::	Em, Pm, vertexPm
 	end type
 
 ! EVENT structures
@@ -121,7 +121,7 @@
 	type event
                 sequence
 		real*8	Ein
-		real*8	Em, Pm
+		real*8	Em, Pm, vertexPm
 		real*8	Emiss, Pmiss
 		real*8	Pmx, Pmy, Pmz
 		real*8	PmPar, PmPer, PmOop
